@@ -1,99 +1,31 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Hot Leak Vault</title>
-
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  <script src='//libtl.com/sdk.js' data-zone='YOUR_ZONE_ID'></script>
-
-  <style>
-    body{
-      margin:0;
-      background:#0d0d0d;
-      font-family: Arial;
-      color:white;
-    }
-
-    .header{
-      padding:15px;
-      text-align:center;
-      font-size:18px;
-      font-weight:bold;
-      background:#111;
-    }
-
-    .card{
-      background:#1a1a1a;
-      margin:15px;
-      border-radius:12px;
-      overflow:hidden;
-    }
-
-    .video{
-      height:200px;
-      background:black;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-
-    .play{
-      font-size:30px;
-      border:2px solid white;
-      border-radius:50%;
-      padding:10px 15px;
-    }
-
-    .title{
-      padding:10px;
-      font-size:14px;
-    }
-
-    .btn{
-      margin:10px;
-      padding:12px;
-      text-align:center;
-      background:linear-gradient(90deg,#ff004f,#ff3c3c);
-      border-radius:8px;
-      cursor:pointer;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LEION Mini App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="bg-black min-h-screen flex items-center justify-center px-4">  <div class="w-full max-w-sm bg-zinc-900 border border-zinc-800 rounded-3xl shadow-2xl p-6 text-center"><!-- Header -->
+<h1 class="text-4xl font-extrabold text-yellow-400 tracking-widest mb-6">
+  LEION
+</h1>
 
-<body>
-
-<div class="header">Hot Leak Vault</div>
-
-<div class="card">
-  <div class="video">
-    <div class="play">▶</div>
-  </div>
-
-  <div class="title">
-    Viral Video Unlock System
-  </div>
-
-  <div class="btn" onclick="watchAd()">
-    UNLOCK – <span id="count">0</span>/5 ADS
-  </div>
+<!-- Telegram Username -->
+<div class="bg-zinc-800 rounded-2xl py-4 px-4 mb-4">
+  <p class="text-zinc-400 text-sm mb-1">Telegram Username</p>
+  <h2 class="text-white text-xl font-bold">@username</h2>
 </div>
 
-<script>
-let ads = 0;
+<!-- Ads Count -->
+<div class="bg-zinc-800 rounded-2xl py-4 px-4 mb-6">
+  <p class="text-zinc-400 text-sm mb-1">Ads Watched</p>
+  <h2 class="text-green-400 text-3xl font-extrabold">0</h2>
+</div>
 
-function watchAd(){
-  if(ads >= 5){
-    window.location.href = "https://example.com";
-    return;
-  }
+<!-- Watch Ads Button -->
+<button class="w-full bg-yellow-400 hover:bg-yellow-300 text-black font-bold text-lg py-4 rounded-2xl transition duration-300 shadow-lg">
+  Watch Ads
+</button>
 
-  show_10898623().then(()=>{
-    ads++;
-    document.getElementById("count").innerText = ads;
-  });
-}
-</script>
-
-</body>
+  </div></body>
 </html>
